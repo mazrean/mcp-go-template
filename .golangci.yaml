@@ -1,15 +1,6 @@
-
+version: "2"
 linters:
   enable:
-    - govet
-    - errcheck
-    - staticcheck
-    - unused
-    - gosimple
-    - ineffassign
-    - typecheck
-    - revive
-    - gofmt
     - asasalint
     - asciicheck
     - bidichk
@@ -20,13 +11,17 @@ linters:
     - gocheckcompilerdirectives
     - gocritic
     - goheader
-    - goimports
     - gosec
     - misspell
     - nakedret
     - nilerr
     - nosprintfhostport
+    - revive
     - sqlclosecheck
     - unconvert
     - unparam
     - whitespace
+formatters:
+  enable:
+    - gofmt
+    - goimports

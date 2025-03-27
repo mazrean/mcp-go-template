@@ -1,3 +1,4 @@
+// Description: Entrypoint of the application.
 package main
 
 import (
@@ -6,8 +7,8 @@ import (
 	"os"
 
 	"github.com/alecthomas/kong"
-	"github.com/mazrean/mcp-go-template/mcp"
-	"github.com/mazrean/mcp-go-template/mcp/tools"
+	"github.com/mazrean/mcp-go-template/internal/mcp"
+	"github.com/mazrean/mcp-go-template/internal/mcp/tools"
 )
 
 var (
@@ -18,15 +19,15 @@ var (
 // CLI represents command line options and configuration file values
 var CLI struct {
 	Version  kong.VersionFlag `kong:"short='v',help='Show version and exit.'"`
-	LogLevel string           `kong:"short='l',default='info',enum='debug,info,warn,error',help='Log level',env='MCP_TARMAQ_LOG_LEVEL'"`
+	LogLevel string           `kong:"short='l',default='info',enum='debug,info,warn,error',help='Log level',env='LOG_LEVEL'"`
 }
 
 // loadConfig loads and parses configuration from command line arguments
 func loadConfig() (*kong.Context, error) {
 	// Parse command line arguments
 	parser := kong.Must(&CLI,
-		kong.Name("mcp-tarmaq"),
-		kong.Description("A Model Context Protocol (MCP) server that suggests files related to files that have already been modified."),
+		kong.Name("mcp-go-template"),
+		kong.Description("A Model Context Protocol (MCP) server template."),
 		kong.Vars{"version": fmt.Sprintf("%s (%s)", version, revision)},
 		kong.UsageOnError(),
 	)
