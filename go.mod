@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/alecthomas/kong v1.9.0
-	github.com/mark3labs/mcp-go v0.17.0
+	github.com/mark3labs/mcp-go v0.19.0
 	github.com/mazrean/mcp-tarmaq v0.1.0-alpha9
 )
 
