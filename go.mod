@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/alecthomas/kong v1.9.0
-	github.com/mark3labs/mcp-go v0.17.0
+	github.com/mark3labs/mcp-go v0.25.0
 	github.com/mazrean/mcp-tarmaq v0.1.0-alpha9
 )
 
@@ -25,6 +25,7 @@ require (
 	github.com/pjbgf/sha1cd v0.3.2 // indirect
 	github.com/sergi/go-diff v1.3.2-0.20230802210424-5b0b94c5c0d3 // indirect
 	github.com/skeema/knownhosts v1.3.1 // indirect
+	github.com/spf13/cast v1.7.1 // indirect
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
 	github.com/yosida95/uritemplate/v3 v3.0.2 // indirect
 	golang.org/x/crypto v0.35.0 // indirect
